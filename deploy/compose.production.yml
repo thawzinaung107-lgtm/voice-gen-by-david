@@ -1,0 +1,42 @@
+name: voicegen-production
+services:
+  api:
+    image: ${VOICEGEN_IMAGE:?Set an immutable tested image tag or digest}
+    env_file:
+      - ${VOICEGEN_ENV_FILE:?Set the absolute path to the private runtime env file}
+    ports:
+      - "127.0.0.1:18787:8000"
+    restart: unless-stopped
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 128
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+  worker:
+    profiles: [worker]
+    image: ${VOICEGEN_IMAGE:?Set an immutable tested image tag or digest}
+    env_file:
+      - ${VOICEGEN_ENV_FILE:?Set the absolute path to the private runtime env file}
+    command: [python, -m, production.worker]
+    restart: unless-stopped
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 128
+    healthcheck:
+      disable: true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"

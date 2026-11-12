@@ -1,0 +1,12 @@
+**
+!requirements.txt
+!production/
+!production/**
+!alembic/
+!alembic/**
+!alembic.ini
+!deploy/
+!deploy/logging_config.py
+!deploy/logging.json
+**/__pycache__/
+**/*.pyc

@@ -1,0 +1,51 @@
+name: Production verification
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  frontend-and-staging:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+      - run: python -m unittest discover -s server -p 'test_*.py' -v
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/phase2-ui.cjs
+  production:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: voicegen_test
+          POSTGRES_USER: voicegen_test
+          POSTGRES_PASSWORD: voicegen_test
+        ports: ['55432:5432']
+        options: >-
+          --health-cmd "pg_isready -U voicegen_test -d voicegen_test"
+          --health-interval 2s --health-timeout 3s --health-retries 30
+    env:
+      DATABASE_URL: postgresql+psycopg://voicegen_test:voicegen_test@127.0.0.1:55432/voicegen_test
+      TEST_DATABASE_URL: postgresql+psycopg://voicegen_test:voicegen_test@127.0.0.1:55432/voicegen_test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-dev.txt
+      - run: alembic upgrade head
+      - run: python -m pytest tests/production -q
+      - run: docker build -f deploy/Dockerfile -t voicegen-ci:${{ github.sha }} .
+      - run: bash scripts/production-verify-image.sh voicegen-ci:${{ github.sha }}
+      - run: bash scripts/production-restore-drill.sh

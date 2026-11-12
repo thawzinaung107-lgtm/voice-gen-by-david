@@ -1,0 +1,230 @@
+[
+  {
+    "width": 390,
+    "locale": "EN",
+    "page": "library",
+    "failures": []
+  },
+  {
+    "width": 390,
+    "locale": "EN",
+    "page": "long-description",
+    "failures": []
+  },
+  {
+    "width": 390,
+    "locale": "EN",
+    "page": "dialog",
+    "failures": []
+  },
+  {
+    "width": 390,
+    "locale": "EN",
+    "page": "menu",
+    "failures": []
+  },
+  {
+    "width": 390,
+    "locale": "EN",
+    "page": "studio",
+    "failures": []
+  },
+  {
+    "width": 390,
+    "locale": "MM",
+    "page": "library",
+    "failures": []
+  },
+  {
+    "width": 390,
+    "locale": "MM",
+    "page": "long-description",
+    "failures": []
+  },
+  {
+    "width": 390,
+    "locale": "MM",
+    "page": "dialog",
+    "failures": []
+  },
+  {
+    "width": 390,
+    "locale": "MM",
+    "page": "menu",
+    "failures": []
+  },
+  {
+    "width": 390,
+    "locale": "MM",
+    "page": "studio",
+    "failures": []
+  },
+  {
+    "width": 768,
+    "locale": "EN",
+    "page": "library",
+    "failures": []
+  },
+  {
+    "width": 768,
+    "locale": "EN",
+    "page": "long-description",
+    "failures": []
+  },
+  {
+    "width": 768,
+    "locale": "EN",
+    "page": "dialog",
+    "failures": []
+  },
+  {
+    "width": 768,
+    "locale": "EN",
+    "page": "menu",
+    "failures": []
+  },
+  {
+    "width": 768,
+    "locale": "EN",
+    "page": "studio",
+    "failures": []
+  },
+  {
+    "width": 768,
+    "locale": "MM",
+    "page": "library",
+    "failures": []
+  },
+  {
+    "width": 768,
+    "locale": "MM",
+    "page": "long-description",
+    "failures": []
+  },
+  {
+    "width": 768,
+    "locale": "MM",
+    "page": "dialog",
+    "failures": []
+  },
+  {
+    "width": 768,
+    "locale": "MM",
+    "page": "menu",
+    "failures": []
+  },
+  {
+    "width": 768,
+    "locale": "MM",
+    "page": "studio",
+    "failures": []
+  },
+  {
+    "width": 1024,
+    "locale": "EN",
+    "page": "library",
+    "failures": []
+  },
+  {
+    "width": 1024,
+    "locale": "EN",
+    "page": "long-description",
+    "failures": []
+  },
+  {
+    "width": 1024,
+    "locale": "EN",
+    "page": "dialog",
+    "failures": []
+  },
+  {
+    "width": 1024,
+    "locale": "EN",
+    "page": "menu",
+    "failures": []
+  },
+  {
+    "width": 1024,
+    "locale": "EN",
+    "page": "studio",
+    "failures": []
+  },
+  {
+    "width": 1024,
+    "locale": "MM",
+    "page": "library",
+    "failures": []
+  },
+  {
+    "width": 1024,
+    "locale": "MM",
+    "page": "long-description",
+    "failures": []
+  },
+  {
+    "width": 1024,
+    "locale": "MM",
+    "page": "dialog",
+    "failures": []
+  },
+  {
+    "width": 1024,
+    "locale": "MM",
+    "page": "menu",
+    "failures": []
+  },
+  {
+    "width": 1024,
+    "locale": "MM",
+    "page": "studio",
+    "failures": []
+  },
+  {
+    "width": 1440,
+    "locale": "EN",
+    "page": "library",
+    "failures": []
+  },
+  {
+    "width": 1440,
+    "locale": "EN",
+    "page": "long-description",
+    "failures": []
+  },
+  {
+    "width": 1440,
+    "locale": "EN",
+    "page": "dialog",
+    "failures": []
+  },
+  {
+    "width": 1440,
+    "locale": "EN",
+    "page": "studio",
+    "failures": []
+  },
+  {
+    "width": 1440,
+    "locale": "MM",
+    "page": "library",
+    "failures": []
+  },
+  {
+    "width": 1440,
+    "locale": "MM",
+    "page": "long-description",
+    "failures": []
+  },
+  {
+    "width": 1440,
+    "locale": "MM",
+    "page": "dialog",
+    "failures": []
+  },
+  {
+    "width": 1440,
+    "locale": "MM",
+    "page": "studio",
+    "failures": []
+  }
+]

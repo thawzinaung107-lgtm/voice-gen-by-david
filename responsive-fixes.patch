@@ -1,0 +1,72 @@
+--- a/src/styles.css
++++ b/src/styles.css
+@@ -43,7 +43,7 @@
+ @media(max-width:510px){.studio-hero{padding:24px 18px 22px}.studio-hero__copy{margin-top:22px}.studio-hero h1{font-size:28px}.studio-hero p{font-size:12px}.mode-switch button{padding:9px}.mode-switch small{display:none}.studio-workspace{padding:16px 16px 110px}.tool-tabs{gap:6px}.tool-tabs button{height:57px;display:grid;gap:2px;padding:6px;font-size:9px}.tool-tabs button svg{width:16px}.editor-card{padding:14px}.editor-card__head{display:grid}.config-badge{justify-self:start}.editor-card textarea{height:280px;padding:14px;font-size:13px}.editor-card__footer{display:grid}.editor-card__footer span:last-child{text-align:left}.advanced-grid{grid-template-columns:1fr}.studio-rail{grid-template-columns:1fr}.studio-rail .studio-card:first-child{grid-column:auto}.voice-picker{grid-template-columns:repeat(4,1fr)}}
+ 
+ /* Voice Library responsive alignment repair */
+-.app{max-width:100%;overflow-x:hidden}.main,.content,.voice-grid,.voice-card,.voice-card__top,.voice-card__info,.voice-card__wave,.voice-card__actions,.compare-panel,.compare-panel__controls,.compare-choice,.compare-choice>div{min-width:0}
++.app{max-width:100%}.main,.content,.voice-grid,.voice-card,.voice-card__top,.voice-card__info,.voice-card__wave,.voice-card__actions,.compare-panel,.compare-panel__controls,.compare-choice,.compare-choice>div{min-width:0}
+ .hero__title{width:min(100%,900px);height:auto;line-height:1.4;font-weight:500;overflow-wrap:anywhere}
+ .voice-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:16px;align-items:stretch}
+ .voice-card{display:flex;flex-direction:column;overflow:hidden;padding:20px;min-height:100%}
+@@ -54,7 +54,7 @@
+ .voice-card__wave .wave{width:100%;height:42px;overflow:hidden;contain:paint}.voice-card__wave small{display:block;max-width:100%;font-size:9px;line-height:1.4;letter-spacing:.55px;text-align:right;white-space:normal;overflow-wrap:anywhere}
+ .wave{width:100%;max-width:100%;overflow:hidden;contain:paint;gap:2px}.wave span{flex:1 1 0;min-width:1px;max-width:5px}
+ .voice-card__actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:12px}.voice-card__actions button{width:100%;min-width:0;min-height:48px;height:auto;padding:9px 10px;font-size:12px;line-height:1.45;white-space:normal;text-wrap:balance}.play-btn,.select-btn{flex:none}
+-.compare-panel{display:grid;grid-template-columns:minmax(220px,.75fr) minmax(0,2fr);align-items:center;gap:24px}.compare-panel__intro{width:auto;min-width:0;max-width:320px}.compare-panel__controls{display:grid;grid-template-columns:minmax(180px,1fr) auto minmax(180px,1fr) minmax(150px,auto);align-items:end;gap:10px;width:100%}.compare-choice{width:100%}.compare-choice>div{display:grid;grid-template-columns:minmax(88px,.45fr) minmax(90px,1fr);align-items:center}.compare-choice select{width:100%;max-width:none;min-width:0;text-overflow:ellipsis}.compare-choice .wave{width:100%;max-width:100%;overflow:hidden}.compare-vs{align-self:center;margin:0 0 10px}.compare-play{width:100%;min-width:0;min-height:50px;padding:10px 12px;line-height:1.45;white-space:normal;text-wrap:balance}
++.compare-panel{display:grid;grid-template-columns:1fr;align-items:center;gap:24px}.compare-panel__intro{width:auto;min-width:0;max-width:320px}.compare-panel__controls{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:10px;width:100%}.compare-choice{width:100%}.compare-choice>div{display:grid;grid-template-columns:minmax(88px,.45fr) minmax(90px,1fr);align-items:center}.compare-choice select{width:100%;max-width:none;min-width:0;text-overflow:ellipsis}.compare-choice .wave{width:100%;max-width:100%;overflow:hidden}.compare-vs{align-self:center;margin:0 0 10px}.compare-play{grid-column:1/-1;width:100%;min-width:0;min-height:50px;padding:10px 12px;line-height:1.45;white-space:normal;text-wrap:balance}
+ .app:lang(my) .voice-card__tagline,.app:lang(my) .voice-card__uses{font-size:15px;line-height:1.75}.app:lang(my) .voice-card__actions button,.app:lang(my) .compare-play{font-size:13px;line-height:1.65}.app:lang(my) .voice-card__wave small{font-size:11px;line-height:1.65;letter-spacing:0}.app:lang(my) .compare-panel p{font-size:15px;line-height:1.75}.app:lang(my) .compare-choice label{font-size:12px;line-height:1.6}.app:lang(my) .compare-choice select{font-size:14px;line-height:1.6}
+ @media(max-width:1200px){.compare-panel{grid-template-columns:1fr}.compare-panel__intro{max-width:none}.compare-panel__controls{grid-template-columns:minmax(180px,1fr) auto minmax(180px,1fr)}.compare-play{grid-column:1/-1}.compare-vs{margin-bottom:10px}}
+ @media(max-width:1100px){.sidebar{display:none}.main{width:100%}.mobile-menu{display:grid}.topbar{padding-left:20px;padding-right:20px}.content,.hero{padding-left:26px;padding-right:26px}.voice-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr))}}
+@@ -64,7 +64,7 @@
+ 
+ /* Global content-driven responsive safety */
+ :root{--font-mm:'Noto Sans Myanmar','Padauk',sans-serif}
+-html,body,#root{max-width:100%;min-width:0;min-height:100%;overflow-x:hidden}
++html,body,#root{max-width:100%;min-width:0;min-height:100%}
+ .app[lang="my"]{font-family:var(--font-mm);line-height:1.75;overflow-wrap:break-word;word-break:normal}
+ .app[lang="my"] button,.app[lang="my"] input,.app[lang="my"] select,.app[lang="my"] textarea{font-family:var(--font-mm);line-height:1.75}
+ :where(h1,h2,h3,p,small,strong,label,button,option){overflow-wrap:break-word;word-break:normal}
+@@ -88,3 +88,22 @@
+ @media(max-width:700px){.chosen-panel{grid-template-columns:auto minmax(0,1fr)}.chosen-panel>button{grid-column:1/-1;width:100%}.footer{grid-template-columns:1fr}.footer>div:last-child{justify-self:start;text-align:left}.detail-dialog__banner{grid-template-columns:minmax(90px,auto) minmax(0,1fr)}}
+ @media(max-width:510px){.topbar{min-height:76px}.topbar__left{flex-basis:auto}.topbar__right{flex-wrap:nowrap}.hero__search{align-items:stretch}.searchbox__filter{flex-basis:53px}.mode-switch{display:grid;grid-template-columns:1fr}.mode-switch button{width:100%;min-height:52px}.mode-switch small{display:block}.editor-card__head,.advanced-card__title,.studio-card__title{display:flex}.studio-card__title small{text-align:left}.detail-dialog__banner{grid-template-columns:1fr;text-align:center}.detail-dialog__banner .avatar{justify-self:center}.toast{left:16px;right:16px;max-width:none}.bottom-nav{align-items:stretch}}
+ @media(max-width:360px){.hero{padding-left:15px;padding-right:15px}.content{padding-left:12px;padding-right:12px}.voice-card__top{grid-template-columns:64px minmax(0,1fr) auto}.voice-card__avatar{width:64px}.voice-card__avatar .avatar{width:60px;height:60px}.chosen-panel{grid-template-columns:1fr;text-align:center}.chosen-panel .avatar{justify-self:center}.chosen-panel>button{grid-column:auto}.studio-cast{grid-template-columns:auto minmax(0,1fr)}.studio-cast>button{grid-column:1/-1;width:100%}.history-card{grid-template-columns:1fr}.history-card__icon{justify-self:start}}
++
++/* Intrinsic layout corrections: text remains visible at its original size. */
++.app:lang(my) :is(h1,h2,h3){font-family:var(--font-mm);line-height:1.75;letter-spacing:normal;word-break:normal;overflow-wrap:break-word}
++.app:lang(my) :is(.eyebrow,.overline,.chosen-panel span,.studio-hero__copy>span){letter-spacing:normal;line-height:1.75}
++.hero__copy{padding-right:230px}
++.hero__title{overflow-wrap:break-word}
++.voice-card__actions button span{overflow-wrap:break-word}
++.voice-card__wave{overflow:visible}
++.wave{gap:clamp(0px,.15vw,2px)}
++.wave span{min-width:0}
++.filterbar__choices{flex-wrap:wrap;overflow:visible;max-width:100%}
++.chosen-panel>button{max-width:none}
++.avatar{flex-shrink:0}
++.sidebar__footer{margin-top:24px}
++.sidebar__nav{flex:1 0 auto}
++.mobile-sheet{top:0;bottom:0;max-height:100dvh;align-content:start;overscroll-behavior:contain;padding-bottom:calc(25px + env(safe-area-inset-bottom))}
++@media(min-width:1101px){.mobile-sheet{display:none}}
++@media(max-width:1100px){.hero__copy{padding-right:0}.hero__right{display:none}}
++@media(max-width:700px){.chosen-panel>button{font-size:13px}.chosen-panel>button svg{display:block}}
+--- a/src/main.tsx
++++ b/src/main.tsx
+@@ -405,7 +405,7 @@
+ 
+     <main className="main">
+       <header className="topbar">
+-        <div className="topbar__left"><button className="iconbtn mobile-menu" aria-label="Open menu" onClick={() => setMobileMenu(!mobileMenu)}><Menu size={20} /></button><div className="topbar__logo"><AudioLines size={23} /><span>Voice Gen <b>V2</b></span></div><span className="topbar__breadcrumb">/ {page === 'library' ? t.nav[1] : t.nav[2]}</span></div>
++        <div className="topbar__left"><button className="iconbtn mobile-menu" aria-label="Open menu" aria-expanded={mobileMenu} aria-controls="mobile-navigation" onClick={() => setMobileMenu(!mobileMenu)}><Menu size={20} /></button><div className="topbar__logo"><AudioLines size={23} /><span>Voice Gen <b>V2</b></span></div><span className="topbar__breadcrumb">/ {page === 'library' ? t.nav[1] : t.nav[2]}</span></div>
+         <div className="topbar__right">
+           <button className="iconbtn theme-btn" onClick={() => setLightMode(!lightMode)} aria-label="Toggle theme" title={t.theme}><MoonStar size={19} /></button>
+           <div className="language" aria-label="Language" role="group"><Globe2 size={15} /><button className={locale === 'en' ? 'is-current' : ''} aria-pressed={locale === 'en'} onClick={() => setLocale('en')}>EN</button><span>|</span><button className={locale === 'mm' ? 'is-current' : ''} aria-pressed={locale === 'mm'} onClick={() => setLocale('mm')}>MM</button></div>
+@@ -414,7 +414,7 @@
+         </div>
+       </header>
+ 
+-      {mobileMenu && <div className="mobile-sheet"><button onClick={resetMenu} className="iconbtn close-menu" aria-label={t.close}><X /></button>{t.nav.map((n, i) => <button key={n} onClick={() => { if (i === 1) openPage('library'); else if (i === 2) openPage('studio'); else { resetMenu(); showNotice(locale === 'mm' ? 'ဒီ Page ကို နောက်မှ ဆက်လုပ်ပါမယ်။' : 'Coming in a later phase.'); } }} className={(i === 1 && page === 'library') || (i === 2 && page === 'studio') ? 'is-current' : ''}>{n}</button>)}</div>}
++      {mobileMenu && <div className="mobile-sheet" id="mobile-navigation" role="navigation" aria-label="Mobile navigation"><button onClick={resetMenu} className="iconbtn close-menu" aria-label={t.close}><X /></button>{t.nav.map((n, i) => <button key={n} onClick={() => { if (i === 1) openPage('library'); else if (i === 2) openPage('studio'); else { resetMenu(); showNotice(locale === 'mm' ? 'ဒီ Page ကို နောက်မှ ဆက်လုပ်ပါမယ်။' : 'Coming in a later phase.'); } }} className={(i === 1 && page === 'library') || (i === 2 && page === 'studio') ? 'is-current' : ''}>{n}</button>)}</div>}
+ 
+       {page === 'library' ? <>
+       <section className="hero">
